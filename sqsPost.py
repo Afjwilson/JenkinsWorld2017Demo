@@ -1,7 +1,5 @@
 #!/usr/bin/python
  
-sys.path.append(os.environ['WORKSPACE'])
-
 import boto3
 import os
 import json
