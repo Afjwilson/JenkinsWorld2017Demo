@@ -1,6 +1,4 @@
 #!/usr/bin/python
-
-export PYTHONPATH=$WORKSPACE:$PYTHONPATH
   
 import boto3
 import os
