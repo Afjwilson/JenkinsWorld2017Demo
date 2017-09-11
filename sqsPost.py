@@ -1,4 +1,5 @@
 #!/usr/bin/python
+python -m pip install --user boto3
 
 import boto3
 import os
