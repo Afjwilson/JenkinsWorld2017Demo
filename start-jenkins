@@ -1,0 +1,16 @@
+#!/bin/bash
+# start docker service - modify visudo to enable passwordless sudo
+docker run \
+  --name jenkins \
+  -u root \
+  --rm \
+  -d \
+  -p 8080:8080 \
+  -v $HOME/jenkins:/var/jenkins_home \
+  -v /var/run/docker.sock:/var/run/docker.sock \
+  -v $HOME/alpinepackages:/var/cache/apk \
+  jenkinsci/blueocean
+docker exec -u root jenkins apk update
+docker exec -u root jenkins apk add ruby
+docker exec -u root jenkins apk add build-base ruby gcc ruby-rdoc ruby-irb ruby-bigdecimal ruby-dev
+docker exec -u root jenkins gem install conjur-cli
