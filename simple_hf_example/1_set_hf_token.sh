@@ -6,9 +6,8 @@
 
 #####
 # HARD CODED VALUES from ../policy.yml in parent directory
-declare HOST_FACTORY_NAME=webapp1/tomcat_factory
-declare HOST_NAME=tomcat1
-declare VAR_ID=webapp1/database_password 
+declare HOST_FACTORY_NAME=jenkins/masters
+declare HOST_NAME=jenkins1
 ######
 
 # data specs and time math are not portable - set DATE_SPEC to the correct platform
